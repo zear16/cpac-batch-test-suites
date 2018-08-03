@@ -1,0 +1,10 @@
+export USER=payment
+export PASS=password
+export SERVER=CPACSIT
+export DEBUG=1
+export BATCH_FILE_PATH=/opt/ais/cpac/batchprepaid
+export EXECUTE_PATH=/app/payment/loader
+export EXECUTE=
+export EXECUTE_PARAM=
+export INTERFACE_NAME=
+export CONFIG_NAME=config

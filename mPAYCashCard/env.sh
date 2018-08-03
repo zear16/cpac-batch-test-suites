@@ -1,0 +1,3 @@
+export EXPORT_PATH=/export/home/MNT_NFS/cpac/payment/dev/batch/mpay_settlement/cashcard
+export EXPORT_DATA_FILE=AMP_RECHARGE_MERCHANTID_20160616_1.dat
+export EXPORT_SYNC_FILE=AMP_RECHARGE_MERCHANTID_20160616_1.end

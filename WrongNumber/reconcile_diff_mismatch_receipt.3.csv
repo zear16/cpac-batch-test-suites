@@ -1,0 +1,2 @@
+S,"select count(*) as COUNT_RECEIPT from PMDB..PM_RECEIPT R inner join PMDB..PM_JOB_ORDER O on (R.RECEIPT_DATE = O.DATA_DATE_FR) where R.BANK_CODE = 804 and O.ORDER_ID = @order_id",
+F,COUNT_RECEIPT,2

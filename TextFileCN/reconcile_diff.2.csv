@@ -1,0 +1,2 @@
+S,"select count(*) as COUNT_FILE from PMDB..PM_BATCH_PP_CN T inner join PMDB..PM_PREPAID_LOAD_BATCH L on (T.BATCH_ID = L.BATCH_ID) inner join PMDB..PM_JOB_ORDER O on (L.ORDER_ID = O.ORDER_ID) where O.ORDER_ID = @order_id",
+F,COUNT_FILE,1

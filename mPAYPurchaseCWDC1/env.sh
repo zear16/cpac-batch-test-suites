@@ -1,0 +1,2 @@
+export BATCH_FILE_PATH=/app/payment/batch/mpay_settlement/DATA
+export INTERFACE_FILE=DailymPAYFlexiPricePaidTransactionService_160616_DCBcwdc1google_160616.dat

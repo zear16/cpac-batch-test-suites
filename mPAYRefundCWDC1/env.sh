@@ -1,0 +1,4 @@
+export BATCH_FILE_PATH=/dwh/nfs/DCB/DCBrefund
+export INTERFACE_FILE=mPAYFlexiPriceRefundPaidTransactionService_20160616_0000_DCBcwdc1refund_20160616000000.dat
+export ADJUST_IN_PATH=/export/home/MNT_NFS/bos1/BSSBroker/input/AdjustBalance
+export ADJUST_OUT_PATH=/export/home/MNT_NFS/bos1/BSSBroker/output/AdjustBalance

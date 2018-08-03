@@ -1,0 +1,42 @@
+#!/bin/bash
+
+isql -U${USER} -P${PASS} -S${SERVER} -w200 -Jutf8 -i ${INTERFACE_NAME}/cleanup.sql
+
+if [ -f "${BATCH_FILE_PATH}/${INTERFACE_FILE}" ]; then
+  rm ${BATCH_FILE_PATH}/${INTERFACE_FILE}
+fi
+
+if [ -f "${WORKING_PATH}/chk_order_id" ]; then
+  CHK_ORDER_ID=$(cat ${WORKING_PATH}/chk_order_id)
+  
+  SCRIPT=${WORKING_PATH}/_cleanup.sql
+  echo -e "use PMDB" > ${SCRIPT}
+  echo -e "\ngo" >> ${SCRIPT}
+  echo -e "\nset nocount on" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_H where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_D where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_B where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_T where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_ERROR_H where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_ERROR_D where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_INF_ADJUST_BALANCE_ERROR_T where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_JOB_ORDER where ORDER_ID = ${CHK_ORDER_ID}" >> ${SCRIPT}
+
+  isql -U${USER} -P${PASS} -S${SERVER} -i ${SCRIPT}
+fi
+
+if [ -f "${WORKING_PATH}/act_order_id" ]; then
+  ACT_ORDER_ID=$(cat ${WORKING_PATH}/act_order_id)
+
+  SCRIPT=${WORKING_PATH}/_cleanup.sql
+  echo -e "use PMDB" > ${SCRIPT}
+  echo -e "\ngo" >> ${SCRIPT}
+  echo -e "\nset nocount on" >> ${SCRIPT}
+  echo -e "\ndelete from PM_JOB_ORDER_PARAM where ORDER_ID = ${ACT_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ndelete from PM_JOB_ORDER where ORDER_ID = ${ACT_ORDER_ID}" >> ${SCRIPT}
+  echo -e "\ngo" >> ${SCRIPT}
+
+  isql -U${USER} -P${PASS} -S${SERVER} -i ${SCRIPT}
+fi
+
+isql -U${USER} -P${PASS} -S${SERVER} -w200 -Jutf8 -i ${INTERFACE_NAME}/cleanup_old_abbr_receipt_40.sql

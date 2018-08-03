@@ -1,0 +1,2 @@
+S,"select count(*) as COUNT_ADJUST from PMDB..PM_ADJUST_TRANSACTION T inner join PMDB..PM_JOB_ORDER O on (T.ADJUST_DATE = O.DATA_DATE_FR) where T.BILLING_SYSTEM = 'RTBS' and T.ADJUST_AMT < 0 and T.GEN_CN_BOO = 'Y' and O.ORDER_ID = @order_id",
+F,COUNT_ADJUST,1

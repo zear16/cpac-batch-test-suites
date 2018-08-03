@@ -1,0 +1,2 @@
+S,"select count(*) as COUNT_CREDIT_NOTE from PMDB..PM_CREDIT_NOTE T inner join PMDB..PM_JOB_ORDER O on (T.CN_DATE = O.DATA_DATE_FR) where T.BANK_CODE = 803 and O.ORDER_ID = @order_id",
+F,COUNT_CREDIT_NOTE,0

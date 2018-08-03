@@ -1,0 +1,2 @@
+S,"select B.BANK_CODE from PMDB..PM_BATCH_DCB B inner join PMDB..PM_PREPAID_LOAD_BATCH L on (B.BATCH_ID = L.BATCH_ID) where L.ORDER_ID = @order_id",
+F,BANK_CODE,801

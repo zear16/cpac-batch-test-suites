@@ -1,0 +1,54 @@
+Get JOB_ORDER with RUN_DATE=[Dec 21 2016], ORDER_STATUS=[W], DATA_DATE_FR=[Dec
+20 2016]
+Find Old Receipt No. by FIFO
+Find Receipt or Recharge since [Jun  1 2016] until [Jun 30 2016] with Credit
+Note Amount [100.00], Start Time [Dec 20 2016]
+Find Receipt or Recharge since [Jul  1 2016] until [Jul 31 2016] with Credit
+Note Amount [100.00], Start Time [Dec 20 2016]
+Find Receipt or Recharge since [Aug  1 2016] until [Aug 31 2016] with Credit
+Note Amount [100.00], Start Time [Dec 20 2016]
+Find Receipt or Recharge since [Sep  1 2016] until [Sep 30 2016] with Credit
+Note Amount [100.00], Start Time [Dec 20 2016]
+Find Receipt or Recharge since [Oct  1 2016] until [Oct 31 2016] with Credit
+Note Amount [100.00], Start Time [Dec 20 2016]
+Find Receipt or Recharge since [Nov  1 2016] until [Nov 30 2016] with Credit
+Note Amount [100.00], Start Time [Dec 20 2016]
+Found old Receipt No. [D-RP-B-5911-0000004461] from [RECHARGE], full=0,
+cn_mode=P
+parse Receipt No. [D-RP-B-5911-0000004461]
+@new_doc_no=[D-RP-B-5911-0000000048]
+@mobile_no=[0817066135]
+@total_amt=[5626.00],@vat_rate=[7.00],@net_vat_amt=[5257.94],@vat_amt=[368.06]
+Insert PM_TMP_CVR_TO_RECEIPT Success
+Insert PM_TMP_CVR_TO_RECEIPT_DTL Success
+Insert PM_TMP_CVR_TO_RECEIPT_PAYMENT Success
+Start PM_S_SAVE_DOCUMENT_HISTORY
+Generate Credit Note by Receipt No. [D-RP-B-5911-0000000048], id [9100002901]
+@reason_id = [7915], @acc_reason_id = [7915], @cn_mode = [P], @action_user_id =
+[SUYADA], @action_location_code = [1020], @action_terminal_id = [], @shift_id =
+[], @mode = [BA], @receipt_sending = [NO], @cn_type = [NP], @refund_type = [SA],
+@refund_by_cash_amt = [], @bank_acc_no = [], @bank_acc_remark = [], @sub_bop_id
+= [4], @payment_date = [Dec 20 2016], @process_type = [], @category_code = [20],
+@bank_code = [2]
+cn @receipt_id = [9100002901] [Nov 30 2016]
+@receipt_id=[9100002901],@channel_id=[5],@bop_id=[4],@company_id=[2],@document_type_id=[3],@mode=[BA]
+CN_NO---->[D-PC-B-5912-0000000001]
+@v_bop_code ============================= [P ]
+dtl_CN_AMT = [100.00]
+[@v_refund_net_vat_amt=93.45] [@v_refund_vat_amt=6.55]
+[@v_refund_non_vat_amt=0.00] [@v_refund_total_amt=100.00]
+ [] [] [9100001444] [] []
+[CN_REF_DOC_NO=D-RP-B-5911-0000000048|]
+Start PM_S_SAVE_DOCUMENT_HISTORY
+Start PM_S_SAVE_DOCUMENT_HISTORY
+CN_ID = [9100001444]
+Gen Credit Note From Adjust Transaction successfully
+(return status = 0)
+
+Return parameters:
+
+                                                                                                                                                                                                                                                            
+ ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+ NULL                                                                                                                                                                                                                                                       
+
+28431

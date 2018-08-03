@@ -1,0 +1,11 @@
+use PMDB
+
+go
+
+delete from PM_CREDIT_NOTE
+where CN_NO like 'ForUnitTestROMReversal%'
+and CN_DATE = '20160615'
+
+go
+
+

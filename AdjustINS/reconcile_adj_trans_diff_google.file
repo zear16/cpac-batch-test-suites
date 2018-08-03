@@ -1,0 +1,6 @@
+START
+201606150000001|0811097495|Pre-paid|1|1|Active|3G|B|Standard|N|DPC|Mobile|Pre-paid|1393924162|Y|8001|20160615143842|Add Amount|0|93800|0|93800|Active|Active|Normal|Normal|No Fraud|No Fraud|Normal|Normal||0|0|1|EAI Orders|Unit Test Adjust BOS Reconcile Amount|CPAC|GOOGLE_REFUND|800|Main|1393924162
+201606150000001|0811097495|Pre-paid|1|1|Active|3G|B|Standard|N|DPC|Mobile|Pre-paid|1393924162|Y|8001|20160615143842|Add Validity|0|25|0|25|Active|Active|Normal|Normal|No Fraud|No Fraud|Normal|Normal||0|0|1|EAI Orders|Unit Test Adjust BOS Reconcile Validity|CPAC|GOOGLE_REFUND|800|Main|1393924162
+201606150000001|0811097495|Pre-paid|1|1|Active|3G|B|Standard|N|DPC|Mobile|Pre-paid|1393924162|Y|8001|20160615143842|Add Amount|0|93800|0|93800|Active|Active|Normal|Normal|No Fraud|No Fraud|Normal|Normal||0|0|1|EAI Orders|Unit Test Adjust BOS Reconcile Both|CPAC|GOOGLE_REFUND|800|Main|1393924162
+201606150000001|0811097495|Pre-paid|1|1|Active|3G|B|Standard|N|DPC|Mobile|Pre-paid|1393924162|Y|8001|20160615143842|Add Validity|0|25|0|25|Active|Active|Normal|Normal|No Fraud|No Fraud|Normal|Normal||0|0|1|EAI Orders|Unit Test Adjust BOS Reconcile Both|CPAC|GOOGLE_REFUND|800|Main|1393924162
+END

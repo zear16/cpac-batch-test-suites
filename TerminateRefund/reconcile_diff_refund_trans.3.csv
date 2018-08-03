@@ -1,0 +1,2 @@
+S,"select count(*) as COUNT_REFUND from PMDB..PM_REFUND_TRANSACTION T inner join PMDB..PM_JOB_ORDER O on (T.REFUND_DATE = O.DATA_DATE_FR) where T.REFUND_TYPE = 'T' and T.REFUND_STATUS = 'SC' and T.GEN_CN_BOO = 'Y' and O.ORDER_ID = @order_id",
+F,COUNT_REFUND,0

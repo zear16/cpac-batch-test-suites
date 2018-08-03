@@ -1,0 +1,2 @@
+export BATCH_FILE_PATH=/app/payment/batch/dcb_purchase
+export INTERFACE_FILE=flexiPricePaidTransactionService_20140526_1111_DCBcwdc1google_20140526111201.dat

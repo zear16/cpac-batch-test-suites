@@ -1,0 +1,20 @@
+#!/bin/bash
+
+isql -U${USER} -P${PASS} -S${SERVER} -w200 -Jutf8 -i ${INTERFACE_NAME}/init.sql > ${WORKING_PATH}/order_id
+
+cp ${INTERFACE_NAME}/${TEST_CASE_NAME}.file ${BATCH_FILE_PATH}/${INTERFACE_FILE}
+
+#cd ${WORKING_PATH}
+
+#pwd
+
+#if [ -f "${WORKING_PATH}/${INTERFACE_FILE}" ]; then
+#  rm ${WORKING_PATH}/${INTERFACE_FILE}
+#fi
+
+#zip ${INTERFACE_FILE} AWNOVL_16062016001.dat
+
+#cd ..
+
+#cp ${WORKING_PATH}/${INTERFACE_FILE} ${BATCH_FILE_PATH}/${INTERFACE_FILE}
+
